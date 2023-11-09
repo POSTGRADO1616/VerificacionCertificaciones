@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\CertificadoController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FacultadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,10 +20,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(["register" => false]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('Facultades',FacultadController::class);
+Route::get('/VerificacionCertificado',[CertificadoController::class, 'verificacionCertificado'])->name('VerificarCertificado');
+Route::post('/VerificacionCertificado/Curso',[CertificadoController::class, 'verificacionCertificadoCurso'])->name('curso');
