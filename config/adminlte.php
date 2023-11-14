@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'U.A.T.F.',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>DATA</b>CENTER',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -290,96 +290,40 @@ return [
     */
 
     'menu' => [
-        // Navbar items:
+        ['header' => 'ADMINISTRACION ACADEMICA'],
         [
-            'type'         => 'navbar-search',
-            'text'         => 'search',
-            'topnav_right' => true,
+            'text' => 'Facultades',
+            'route' => 'Facultades.index',
+            'icon' => 'fas fa-fw fa-school',
+        ], 
+        [
+            'text' => 'Carreras',
+            'route' => 'Carreras.index',
+            'icon' => 'fas fa-fw fa-school',
         ],
         [
-            'type'         => 'fullscreen-widget',
-            'topnav_right' => true,
-        ],
-
-        // Sidebar items:
-        [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
+            'text' => 'Cursos',
+            'route' => 'Cursos.index',
+            'icon' => 'fas fa-fw fa-graduation-cap',
         ],
         [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
+            'text' => 'Participantes',
+            'route' => 'Participantes.index',
+            'icon' => 'fas fa-fw fa-users',
         ],
+        ['header' => 'Importancia'],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
+            'text'       => 'importante',
             'icon_color' => 'red',
             'url'        => '#',
         ],
         [
-            'text'       => 'warning',
+            'text'       => 'precaucion',
             'icon_color' => 'yellow',
             'url'        => '#',
         ],
         [
-            'text'       => 'information',
+            'text'       => 'informacion',
             'icon_color' => 'cyan',
             'url'        => '#',
         ],
